@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First task</title>
+    <script defer src="main.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Add product</h1>
+<div>
+
+    <label>Product Name</label>
+    <input type="text" id="productNameBox">
+    <span id="productNameErr"></span>
+    
+    <label>Product Price</label>
+    <input type="number" id="productPriceBox">
+    <span id="productPriceErr"></span>
+
+    <label>Product Category</label>
+    <select name="" id="productCategoryBox">
+        <option></option>
+        <option>Drinks</option>
+        <option>Meat</option>
+        <option>Dairy</option>
+        <option>Snacks</option>
+        <option>Basic</option>
+    </select>
+    <span id="productCategoryErr"></span>
+
+    <label>Add products image link</label>
+    <input type="text" id="productImageLinkBox">
+    <span id="productImageLinkErr"></span>
+
+</div>
+
+    <button onclick="addNewProduct()">Add Product</button>
+
+    <br>
+    <hr>
+
+    <h2>My Cart</h2>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="tableBodyBox">
+
+        </tbody>
+
+    </table>
+
+
+</body>
+</html>
