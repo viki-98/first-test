@@ -20,12 +20,12 @@ function addNewProduct () {
 }
 //Displaying all product list from storage
 function displayAllProducts(){
-    const productsList = getAllProductsFromStorage();
-    const tableBodyBox = document.getElementById("tableBodyBox");
+    const productsList = getAllProductsFromStorage()
+    const tableBodyBox = document.getElementById("tableBodyBox")
 
-    tableBodyBox.innerHTML = "";
+    tableBodyBox.innerHTML = ""
   
-    let index = 0; 
+    let index = 0
   
     for (const product of productsList) {
       const productRow = `
@@ -47,22 +47,21 @@ function displayAllProducts(){
                   </td>
               </tr> 
           
-          `;
+          `
   
+      tableBodyBox.innerHTML += productRow
   
-      tableBodyBox.innerHTML += productRow;
-  
-      index++;
+      index++
     }
 }
 //Delete product by index from storage
 function deleteProduct(indexOfProduct){
-    if(!confirm("Are you sure you want to delete?")) return;
+    if(!confirm("Are you sure you want to delete?")) return
 
-    const productsList = getAllProductsFromStorage();
+    const productsList = getAllProductsFromStorage()
     
-    productsList.splice(indexOfProduct, 1);
-    addAllProductsToStorage(productsList);
+    productsList.splice(indexOfProduct, 1)
+    addAllProductsToStorage(productsList)
     displayAllProducts()
 }
 
@@ -78,10 +77,10 @@ function addNewProductToStorage(product){
 //Getting all products from storage
 //Or getting new array if storage is empty
 function getAllProductsFromStorage(){
-    const productsListStr = localStorage.getItem(STORAGE_KEY);
+    const productsListStr = localStorage.getItem(STORAGE_KEY)
 
     const productsList =
-      productsListStr === null ? [] : JSON.parse(productsListStr);
+      productsListStr === null ? [] : JSON.parse(productsListStr)
 
     return productsList
 }
