@@ -10,8 +10,9 @@ h1, h2 {
 
 span {
     color: red;
-    font-size: 0.8rem;
+    font-size: 1.0rem;
     margin-left: 35px;
+    font-weight: bold;
 }
 
 button {
@@ -42,3 +43,5 @@ label,input,select{
     width: 80%;
     margin: 7px auto;
 }
+
+
